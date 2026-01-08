@@ -1,84 +1,49 @@
-PharmIntel – Agentic AI for Pharmaceutical Intelligence
+# PharmIntel – Agentic AI for Pharmaceutical Innovation
 
-PharmIntel is a web-based frontend for an Agentic AI system designed to accelerate pharmaceutical research and drug repurposing workflows.
-The platform enables researchers to run complex multi-agent analyses, visualize insights, and archive intelligence reports in a clean, demo-ready interface.
+PharmIntel is an application built for an Agentic AI–powered pharmaceutical research platform.  
+It enables users to explore drug repurposing opportunities, analyze clinical and market intelligence, and generate structured research reports through an intuitive interface.
 
-This repository contains the frontend application, built to be backend-agnostic, schema-driven, and hackathon-stable.
+---
 
-🚀 Key Capabilities
+## ✨ Key Features
 
-Agentic Research Workspace
+- 🧠 **Agentic AI Workflow Visualization**
+  - Displays master agent orchestration and worker agent execution flow
+- 📊 **Research Workspace**
+  - Prompt-based research input
+  - Live agent workflow tracking
+  - Intelligence summary, opportunity score, and insights
+- 📈 **Data Visualization**
+  - Clinical phase distribution charts
+  - Structured insights and evidence panels
+- 💾 **Save & Archive**
+  - Save reports locally for later review
+  - Persistent archive of past analyses
+- 📤 **Export Reports**
+  - Download full analysis as JSON
+- 🧭 **Clean Navigation**
+  - Landing Page
+  - Workspace
+  - Archive
+- 🎨 **Modern UI/UX**
+  - Built with Tailwind CSS and shadcn/ui
+  - Responsive and demo-ready design
 
-Submit research prompts
+---
 
-Visualize multi-agent execution (market, clinical trials, patents, etc.)
 
-View synthesized intelligence and opportunity scoring
+## Tech stack
+- Framework: React + Vite
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI components: shadcn/ui
+- Charts: Recharts
+- Icons: Lucide React
+- State management: React hooks
+- Storage: Browser LocalStorage (for saved reports)
 
-Results Dashboard
-
-Executive summary
-
-Clinical phase distribution charts
-
-Evidence and citations view
-
-Report Management
-
-Save analysis reports locally
-
-Export reports as structured JSON
-
-Archive and revisit past analyses
-
-Professional UI/UX
-
-Clean, enterprise-style design
-
-Clear separation of Landing, Workspace, and Archive
-
-Built for demos and judge evaluation
-
-🧠 System Architecture (Frontend Perspective)
-
-The frontend is designed around a Master Agent orchestration model:
-
-The UI sends a single research prompt
-
-The backend (or mock layer) returns a structured JSON response
-
-The frontend maps response sections to:
-
-Agent workflow visualization
-
-Intelligence summaries
-
-Charts and metrics
-
-Report storage and export
-
-The frontend does not depend on backend state and can operate fully in mock mode for testing and demos.
-
-🛠 Tech Stack
-
-Framework: React + Vite
-
-Language: TypeScript
-
-Styling: Tailwind CSS
-
-UI Components: shadcn/ui
-
-Charts: Recharts
-
-Icons: Lucide React
-
-State Management: React Hooks
-
-Storage: Browser LocalStorage (for saved reports)
-
-📁 Project Structure
-
+## Project structure
+```
 src/
 ├── components/
 │   ├── LandingPage.tsx
@@ -88,21 +53,36 @@ src/
 │   └── ui/               # shadcn/ui components
 │
 ├── services/
-│   └── agentApi.ts       # backend 
+│   └── agentApi.ts       # backend integration (or mock)
 │
 ├── mocks/
-│   └── agentMock.ts      # mock agent response
+│   └── agentMock.ts      # mock agent responses for demo mode
 │
 ├── App.tsx
 └── main.tsx
+```
 
-▶️ Running the Project Locally
-1️⃣ Install dependencies
+## Running locally
+
+Prerequisites
+- Node.js (16+ recommended) and npm
+
+Install dependencies
+```bash
 npm install
+```
 
-2️⃣ Start development server
+Start development server
+```bash
 npm run dev
+```
 
-
-The app will run at:
+Open the app in your browser:
+```text
 http://localhost:5173
+```
+
+Build for production
+```bash
+npm run build
+```
